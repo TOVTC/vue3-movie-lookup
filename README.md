@@ -27,3 +27,5 @@ npm run dev
 ```sh
 npm run build
 ```
+
+[https://www.codingthesmartway.com/how-to-use-tailwind-css-with-vue-and-vite/](https://www.codingthesmartway.com/how-to-use-tailwind-css-with-vue-and-vite/)
