@@ -14,4 +14,7 @@ const props = defineProps({
             <li>{{ movie.title }} ({{ movie.release_date.split("-")[0] }})</li>
         </RouterLink>
     </ul>
+    <ul v-else>
+        <li>No movies of this category to display at this time</li>
+    </ul>
 </template>
