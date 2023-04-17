@@ -1,25 +1,10 @@
 <script setup>
+    import MovieList from '../components/MovieList.vue'
 </script>
 
 <template>
     <main>
         <h2>Now Playing:</h2>
-        <ul>
-            <RouterLink :to="{ name: 'movie-details' }">
-                <li>Movie Title (2023)</li>
-            </RouterLink>
-            <RouterLink :to="{ name: 'movie-details' }">
-                <li>Movie Title (2023)</li>
-            </RouterLink>
-            <RouterLink :to="{ name: 'movie-details' }">
-                <li>Movie Title (2023)</li>
-            </RouterLink>
-            <RouterLink :to="{ name: 'movie-details' }">
-                <li>Movie Title (2023)</li>
-            </RouterLink>
-            <RouterLink :to="{ name: 'movie-details' }">
-                <li>Movie Title (2023)</li>
-            </RouterLink>
-        </ul>
+        <MovieList />
     </main>
 </template>

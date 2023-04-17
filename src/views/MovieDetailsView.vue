@@ -1,4 +1,5 @@
 <script setup>
+    import MovieList from '../components/MovieList.vue'
 </script>
 
 <template>
@@ -24,43 +25,11 @@
         <section id="suggested">
             <div class="list">
                 <h3>Recommended Films:</h3>
-                <ul>
-                    <RouterLink :to="{ name: 'movie-details' }">
-                        <li>Movie Title (2023)</li>
-                    </RouterLink>
-                    <RouterLink :to="{ name: 'movie-details' }">
-                        <li>Movie Title (2023)</li>
-                    </RouterLink>
-                    <RouterLink :to="{ name: 'movie-details' }">
-                        <li>Movie Title (2023)</li>
-                    </RouterLink>
-                    <RouterLink :to="{ name: 'movie-details' }">
-                        <li>Movie Title (2023)</li>
-                    </RouterLink>
-                    <RouterLink :to="{ name: 'movie-details' }">
-                        <li>Movie Title (2023)</li>
-                    </RouterLink>
-                </ul>
+                <MovieList />
             </div>
             <div class="list">
                 <h3>Similar Films:</h3>
-                <ul>
-                    <RouterLink :to="{ name: 'movie-details' }">
-                        <li>Movie Title (2023)</li>
-                    </RouterLink>
-                    <RouterLink :to="{ name: 'movie-details' }">
-                        <li>Movie Title (2023)</li>
-                    </RouterLink>
-                    <RouterLink :to="{ name: 'movie-details' }">
-                        <li>Movie Title (2023)</li>
-                    </RouterLink>
-                    <RouterLink :to="{ name: 'movie-details' }">
-                        <li>Movie Title (2023)</li>
-                    </RouterLink>
-                    <RouterLink :to="{ name: 'movie-details' }">
-                        <li>Movie Title (2023)</li>
-                    </RouterLink>
-                </ul>
+                <MovieList />
             </div>
         </section>
     </main>
