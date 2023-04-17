@@ -5,19 +5,20 @@ import HelloWorld from './components/HelloWorld.vue'
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
+          <RouterLink to="/"><h1>Movie Lookup</h1></RouterLink>
+        <nav>
+          <RouterLink to="/trending">Trending</RouterLink> |
+          <RouterLink to="/popular">Popular</RouterLink> |
+          <RouterLink to="/top-rated">Top Rated</RouterLink> |
+          <RouterLink to="/now-playing">Now Playing</RouterLink>
+        </nav>
+    </header>
 
   <RouterView />
+  <footer>
+      <!-- <img src="@/assets/tmdb.svg" id="logo"/> -->
+      <p>This product uses the TMDB API but is not endorsed or certified by TMDB</p>
+    </footer>
 </template>
 
 <style scoped>
