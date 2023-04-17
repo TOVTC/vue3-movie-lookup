@@ -4,25 +4,28 @@ import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
-  <header>
-          <RouterLink to="/"><h1>Movie Lookup</h1></RouterLink>
-        <nav>
-          <RouterLink to="/trending">Trending</RouterLink> |
-          <RouterLink to="/popular">Popular</RouterLink> |
-          <RouterLink to="/top-rated">Top Rated</RouterLink> |
-          <RouterLink to="/now-playing">Now Playing</RouterLink>
-        </nav>
-    </header>
-
-  <RouterView />
-  <footer>
-      <!-- <img src="@/assets/tmdb.svg" id="logo"/> -->
-      <p>This product uses the TMDB API but is not endorsed or certified by TMDB</p>
+  <div id="page-container">
+      <header>
+            <RouterLink to="/"><h1>Movie Lookup</h1></RouterLink>
+          <nav>
+            <RouterLink to="/trending">Trending</RouterLink> |
+            <RouterLink to="/popular">Popular</RouterLink> |
+            <RouterLink to="/top-rated">Top Rated</RouterLink> |
+            <RouterLink to="/now-playing">Now Playing</RouterLink>
+          </nav>
+      </header>
+      <div id="content-wrap">
+        <RouterView />
+      </div>
+    <footer id="footer">
+        <!-- <img src="@/assets/tmdb.svg" id="logo"/> -->
+        <p>This product uses the TMDB API but is not endorsed or certified by TMDB</p>
     </footer>
+  </div>
 </template>
 
 <style scoped>
-header {
+/* header {
   line-height: 1.5;
   max-height: 100vh;
 }
@@ -55,9 +58,25 @@ nav a {
 
 nav a:first-of-type {
   border: 0;
+} */
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
 }
 
-@media (min-width: 1024px) {
+#content-wrap {
+  padding-bottom: 2.5rem;
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+}
+
+/* @media (min-width: 1024px) {
   header {
     display: flex;
     place-items: center;
@@ -82,5 +101,5 @@ nav a:first-of-type {
     padding: 1rem 0;
     margin-top: 1rem;
   }
-}
+} */
 </style>
