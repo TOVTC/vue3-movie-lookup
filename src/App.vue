@@ -5,12 +5,12 @@ import { RouterLink, RouterView } from 'vue-router'
 <template>
   <div id="page-container">
       <header>
-            <RouterLink to="/"><h1>Movie Lookup</h1></RouterLink>
+            <RouterLink :to="{ name: 'home' }"><h1>Movie Lookup</h1></RouterLink>
           <nav>
-            <RouterLink to="/trending">Trending</RouterLink> |
-            <RouterLink to="/popular">Popular</RouterLink> |
-            <RouterLink to="/top-rated">Top Rated</RouterLink> |
-            <RouterLink to="/now-playing">Now Playing</RouterLink>
+            <RouterLink :to="{ name: 'trending' }">Trending</RouterLink> |
+            <RouterLink :to="{ name: 'popular' }">Popular</RouterLink> |
+            <RouterLink :to="{ name: 'top-rated' }">Top Rated</RouterLink> |
+            <RouterLink :to="{ name: 'now-playing' }">Now Playing</RouterLink>
           </nav>
       </header>
       <div id="content-wrap">

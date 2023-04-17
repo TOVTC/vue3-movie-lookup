@@ -4,12 +4,22 @@
 <template>
     <main>
         <h2>Results for "Search":</h2>
-            <ul>
+        <ul>
+            <RouterLink :to="{ name: 'movie-details' }">
                 <li>Movie Title (2023)</li>
+            </RouterLink>
+            <RouterLink :to="{ name: 'movie-details' }">
                 <li>Movie Title (2023)</li>
+            </RouterLink>
+            <RouterLink :to="{ name: 'movie-details' }">
                 <li>Movie Title (2023)</li>
+            </RouterLink>
+            <RouterLink :to="{ name: 'movie-details' }">
                 <li>Movie Title (2023)</li>
+            </RouterLink>
+            <RouterLink :to="{ name: 'movie-details' }">
                 <li>Movie Title (2023)</li>
-            </ul>
+            </RouterLink>
+        </ul>
     </main>
 </template>

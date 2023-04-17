@@ -25,21 +25,41 @@
             <div class="list">
                 <h3>Recommended Films:</h3>
                 <ul>
-                    <li>Movie Title (2023)</li>
-                    <li>Movie Title (2023)</li>
-                    <li>Movie Title (2023)</li>
-                    <li>Movie Title (2023)</li>
-                    <li>Movie Title (2023)</li>
+                    <RouterLink :to="{ name: 'movie-details' }">
+                        <li>Movie Title (2023)</li>
+                    </RouterLink>
+                    <RouterLink :to="{ name: 'movie-details' }">
+                        <li>Movie Title (2023)</li>
+                    </RouterLink>
+                    <RouterLink :to="{ name: 'movie-details' }">
+                        <li>Movie Title (2023)</li>
+                    </RouterLink>
+                    <RouterLink :to="{ name: 'movie-details' }">
+                        <li>Movie Title (2023)</li>
+                    </RouterLink>
+                    <RouterLink :to="{ name: 'movie-details' }">
+                        <li>Movie Title (2023)</li>
+                    </RouterLink>
                 </ul>
             </div>
             <div class="list">
                 <h3>Similar Films:</h3>
                 <ul>
-                    <li>Movie Title (2023)</li>
-                    <li>Movie Title (2023)</li>
-                    <li>Movie Title (2023)</li>
-                    <li>Movie Title (2023)</li>
-                    <li>Movie Title (2023)</li>
+                    <RouterLink :to="{ name: 'movie-details' }">
+                        <li>Movie Title (2023)</li>
+                    </RouterLink>
+                    <RouterLink :to="{ name: 'movie-details' }">
+                        <li>Movie Title (2023)</li>
+                    </RouterLink>
+                    <RouterLink :to="{ name: 'movie-details' }">
+                        <li>Movie Title (2023)</li>
+                    </RouterLink>
+                    <RouterLink :to="{ name: 'movie-details' }">
+                        <li>Movie Title (2023)</li>
+                    </RouterLink>
+                    <RouterLink :to="{ name: 'movie-details' }">
+                        <li>Movie Title (2023)</li>
+                    </RouterLink>
                 </ul>
             </div>
         </section>
