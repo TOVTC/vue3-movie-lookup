@@ -1,34 +1,24 @@
 <script setup>
+    import MediaService from '../services/MediaService.js'
     import MovieList from '../components/MovieList.vue'
-    import { ref } from 'vue'
+    import { onMounted, ref } from 'vue'
 
-    const movies = ref([
-        {
-            title: "Title 5",
-            release_date: "2025",
-            id: 5
-        },
-        {
-            title: "Title 4",
-            release_date: "2024",
-            id: 4
-        },
-        {
-            title: "Title 3",
-            release_date: "2023",
-            id: 3
-        },
-        {
-            title: "Title 2",
-            release_date: "2022",
-            id: 2
-        },
-        {
-            title: "Title 1",
-            release_date: "2021",
-            id: 1
+    const props = defineProps({
+        movieName: {
+            type: String,
+            required: true
         }
-    ])
+    })
+    const movies = ref([])
+    onMounted(async () => {
+        let response = await MediaService.getResults(props.movieName)
+        if (!response) {
+            alert("something went wrong")
+            return
+        } else {
+            movies.value = response.data.results
+        }
+    })
 </script>
 
 <template>

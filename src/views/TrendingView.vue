@@ -4,7 +4,7 @@
     import { onMounted, ref } from 'vue'
 
     const movies = ref([])
-    onMounted( async () => {
+    onMounted(async () => {
         let response = await MediaService.getTrending()
         if (!response) {
             alert("something went wrong")

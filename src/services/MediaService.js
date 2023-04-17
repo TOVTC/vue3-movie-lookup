@@ -14,7 +14,7 @@ export default {
     async getResults(name) {
         try {
             let response = await apiClient.get(`/3/search/movie?api_key=${apikey.TMDB_KEY}&language=en-US&query=${name}&page=1&include_adult=false`)
-            return response.data.results
+            return response
         }
         catch (err) {
             console.log(err)
@@ -23,7 +23,7 @@ export default {
     async getDetails(id) {
         try {
             let response = await apiClient.get(`/3/movie/${id}?api_key=${apikey.TMDB_KEY}`)
-            return response.data
+            return response
         }
         catch (err) {
             console.log(err)
@@ -68,7 +68,7 @@ export default {
     async getRecommended(id) {
         try {
             let response = await apiClient.get(`/3/movie/${id}/recommendations?api_key=${apikey.TMDB_KEY}&language=en-US&page=1`)
-            return response.data.results
+            return response
         }
         catch (err) {
             console.log(err)
@@ -77,7 +77,7 @@ export default {
     async getSimilar(id) {
         try {
             let response = await apiClient.get(`/3/movie/${id}/similar?api_key=${apikey.TMDB_KEY}&language=en-US&page=1`)
-            return response.data.results
+            return response
         }
         catch (err) {
             console.log(err)

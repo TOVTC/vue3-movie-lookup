@@ -17,22 +17,17 @@ const router = createRouter({
       component: HomeView
     },
     {
-      path: '/results',
+      path: '/results/:movieName',
       name: 'results',
       component: ResultsView,
-      // props: true
+      props: true
     },
     {
-      path: '/movie-details',
+      path: '/movie-details/:id',
       name: 'movie-details',
       component: MovieDetailsView,
+      props: true
     },
-    // {
-    //   path: '/movie-details/:id',
-    //   name: 'movie-details',
-    //   component: MovieDetailsView,
-    //   props: true,
-    // },
     {
       path: '/trending',
       name: 'trending',
