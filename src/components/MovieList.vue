@@ -9,9 +9,9 @@ const props = defineProps({
 </script>
 
 <template>
-    <ul>
+    <ul v-if="movies.length">
         <RouterLink :to="{ name: 'movie-details' }" v-for="movie in movies" :key="movie.id">
-            <li>{{ movie.title }} ({{ movie.year }})</li>
+            <li>{{ movie.title }} ({{ movie.release_date.split("-")[0] }})</li>
         </RouterLink>
     </ul>
 </template>

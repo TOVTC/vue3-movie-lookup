@@ -1,32 +1,31 @@
 <script setup>
     import MovieList from '../components/MovieList.vue'
-    // import ref to create state
     import { ref } from 'vue'
 
     const movies = ref([
         {
             title: "Title 5",
-            year: 2025,
+            release_date: "2025",
             id: 5
         },
         {
             title: "Title 4",
-            year: 2024,
+            release_date: "2024",
             id: 4
         },
         {
             title: "Title 3",
-            year: 2023,
+            release_date: "2023",
             id: 3
         },
         {
             title: "Title 2",
-            year: 2022,
+            release_date: "2022",
             id: 2
         },
         {
             title: "Title 1",
-            year: 2021,
+            release_date: "2021",
             id: 1
         }
     ])
