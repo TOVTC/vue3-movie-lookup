@@ -23,7 +23,7 @@
 
 <template>
     <main>
-        <h2>Results for "Search":</h2>
+        <h2>Results for "{{ props.movieName }}":</h2>
         <MovieList :movies="movies"/>
     </main>
 </template>
