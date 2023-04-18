@@ -16,8 +16,8 @@
 </script>
 
 <template>
-    <main>
-        <h2>Now Playing:</h2>
+    <main class="p-10">
+        <h2 class="text-xl font-bold">Now Playing:</h2>
         <MovieList :movies="movies"/>
     </main>
 </template>

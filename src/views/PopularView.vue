@@ -16,8 +16,8 @@
 </script>
 
 <template>
-    <main>
-        <h2>Popular:</h2>
+    <main class="p-10">
+        <h2 class="text-xl font-bold">Popular:</h2>
         <MovieList :movies="movies"/>
     </main>
 </template>

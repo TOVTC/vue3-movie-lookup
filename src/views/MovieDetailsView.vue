@@ -80,34 +80,42 @@
 </script>
 
 <template>
-    <main>
+    <main class="p-10">
         <section v-if="film">
-            <h2>{{ film.original_title ? film.original_title : film.title }} {{ film.release_date ? `(${film.release_date.split("-")[0]})` : "" }}</h2>
-            <div class="movie-details">
-                <img :src="url" :alt="altText" />
-                <div class="movie-details">
+            <h2 class="text-2xl font-bold">{{ film.original_title ? film.original_title : film.title }} {{ film.release_date ? `(${film.release_date.split("-")[0]})` : "" }}</h2>
+            <div id="movie-details" class="flex items-end">
+                <img :src="url" :alt="altText"  class="max-h-96 m-3"/>
+                <div class="m-3">
                     <ul>
-                        <li v-if="film.tagline">{{ `"${film.tagline}"` }}</li>
-                        <li v-if="film.release_date">{{ `Release Date - ${film.release_date}` }} </li>
-                        <li v-if="runTime">{{`Runtime - ${runTime}` }}</li>
-                        <li v-if="genres">{{ genres ? `Genres - ${genres}` : ""}}</li>
-                        <li v-if="languages">Languages {{ film.original_language ? `(${film.original_language})` : "" }}{{ languages ? ` - ${languages}` : "" }}</li>
-                        <li v-if="companies">{{ companies ? `Production Company - ${companies}` : "" }}</li>
-                        <li v-if="link"><a :href="link"><span class="exception">{{ link ? link : "" }}</span></a></li>
-                        <li id="description" v-if="film.overview.length">{{ film.overview ? `Synopsis: ${film.overview}` : "" }}</li>
+                        <li v-if="film.tagline" class="italic mb-3">{{ `"${film.tagline}"` }}</li>
+                        <li v-if="film.release_date" class="text-sm">{{ `Release Date - ${film.release_date}` }} </li>
+                        <li v-if="runTime" class="text-sm">{{`Runtime - ${runTime}` }}</li>
+                        <li v-if="genres" class="text-sm">{{ genres ? `Genres - ${genres}` : ""}}</li>
+                        <li v-if="languages" class="text-sm">Languages {{ film.original_language ? `(${film.original_language})` : "" }}{{ languages ? ` - ${languages}` : "" }}</li>
+                        <li v-if="companies" class="text-sm">{{ companies ? `Production Company - ${companies}` : "" }}</li>
+                        <li v-if="link" class="text-sm hover:text-teal-500"><a :href="link"><span class="exception">{{ link ? link : "" }}</span></a></li>
+                        <li v-if="film.overview.length" class="mt-3">{{ film.overview ? `Synopsis: ${film.overview}` : "" }}</li>
                     </ul>
                 </div>
             </div>
         </section>
-        <section id="suggested">
-            <div class="list" v-if="film">
-                <h3>Recommended Films:</h3>
+        <section class="flex flex-wrap justify-between">
+            <div v-if="film" class="m-3">
+                <h3 class="text-lg font-bold">Recommended Films:</h3>
                 <MovieList :movies="recommendedMovies"/>
             </div>
-            <div class="list" v-if="film">
-                <h3>Similar Films:</h3>
+            <div v-if="film" class="m-3">
+                <h3 class="text-lg font-bold">Similar Films:</h3>
                 <MovieList :movies="similarMovies"/>
             </div>
         </section>
     </main>
 </template>
+
+<style scoped>
+@media (max-width: 1250px) {
+    #movie-details {
+        flex-wrap: wrap;
+    }
+}
+</style>

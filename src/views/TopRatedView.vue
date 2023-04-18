@@ -16,8 +16,8 @@
 </script>
 
 <template>
-    <main>
-        <h2>Top Rated:</h2>
+    <main class="p-10">
+        <h2 class="text-xl font-bold">Top Rated:</h2>
         <MovieList :movies="movies"/>
     </main>
 </template>

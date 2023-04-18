@@ -16,8 +16,8 @@
 </script>
 
 <template>
-    <main>
-        <h2>Trending:</h2>
+    <main class="p-10">
+        <h2 class="text-xl font-bold">Trending:</h2>
         <MovieList :movies="movies"/>
     </main>
 </template>

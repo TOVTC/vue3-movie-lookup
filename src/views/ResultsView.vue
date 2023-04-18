@@ -22,8 +22,8 @@
 </script>
 
 <template>
-    <main>
-        <h2>Results for "{{ props.movieName }}":</h2>
+    <main class="p-10">
+        <h2 class="text-xl font-bold">Results for "{{ props.movieName }}":</h2>
         <MovieList :movies="movies"/>
     </main>
 </template>
