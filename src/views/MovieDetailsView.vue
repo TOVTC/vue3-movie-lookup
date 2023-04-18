@@ -81,7 +81,7 @@
 
 <template>
     <main class="p-10">
-        <section v-if="film">
+        <section v-if="film" id="film">
             <h2 class="text-2xl font-bold">{{ film.original_title ? film.original_title : film.title }} {{ film.release_date ? `(${film.release_date.split("-")[0]})` : "" }}</h2>
             <div id="movie-details" class="flex items-end">
                 <img :src="url" :alt="altText"  class="max-h-96 m-3"/>
@@ -113,9 +113,16 @@
 </template>
 
 <style scoped>
-@media (max-width: 1250px) {
+@media (max-width: 750px) {
+    #film {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center
+    }
+
     #movie-details {
         flex-wrap: wrap;
+        justify-content: center;
     }
 }
 </style>

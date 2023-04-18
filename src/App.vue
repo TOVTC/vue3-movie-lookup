@@ -14,7 +14,7 @@ import { RouterLink, RouterView } from 'vue-router'
           </nav>
       </header>
       <div id="content-wrap" class="m-5">
-        <RouterView />
+        <RouterView :key="$route.fullPath"/>
       </div>
     <footer id="footer" class="flex flex-wrap justify-between items-center p-3 bg-teal-200">
         <img src="@/assets/tmdb.svg" id="logo" class="max-w-xs"/>
@@ -40,7 +40,7 @@ import { RouterLink, RouterView } from 'vue-router'
   height: 4.5rem;
 }
 
-@media (max-width: 1250px) {
+@media (max-width: 520px) {
     header, footer {
         justify-content: center;
         padding: 0.5rem;
